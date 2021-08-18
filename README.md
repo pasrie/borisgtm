@@ -1,2 +1,1 @@
-# borisgtm
-borisgtm
+# https://pasrie.github.io/borisgtm/
