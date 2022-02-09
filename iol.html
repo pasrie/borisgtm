@@ -1,0 +1,53 @@
+<html>
+  <head>
+  <title>Test<title>
+    </head>
+    <body>
+      
+      <script type="text/javascript" id="iolScript" data-spon="1757011" data-lang="it" src="https://d2e3ebjq9bfloz.cloudfront.net/Partners/IOL/scripts/jquery.iol.custom.min.js"></script>
+    <!--  Begin Product Custom HTML Markup -->
+<script type="text/javascript" src="https://iol-website.italiaonline.it/script/iol-body.js"></script>
+ <script> 
+ if(document.URL.contains('signin')) {
+  var elementExists = document.getElementsByClassName("signup-state state");
+  if (elementExists !== null){
+   document.querySelectorAll('.btnText')[0].innerHTML = '<span class="btnText">Connettiti con Google</span>'
+   var divider=document.querySelectorAll(".or-divider")[0]; 
+   var dividertext="<span>Oppure</span>";
+   divider.innerHTML=dividertext;
+   var title=document.querySelectorAll(".title")[0]; 
+   var titletext="Iscriviti";
+   title.innerHTML=titletext;
+   var terms=document.querySelector(".terms-of-service"); 
+   var termstext="Continuando, accetti le nostre Condizioni d'uso e l'Informativa sulla privacy.";
+   terms.innerHTML=termstext;
+   $("#firstname").attr("placeholder", "Nome");
+   $("#lastname").attr("placeholder", "Cognome");
+   $("#submit-button > input[type=submit]").attr("value", "Registrati");
+   document.querySelector('.go-to-login-section.link-description').innerHTML = 'Sei gi&agrave; iscritto? <a class="login-link section-link">Log In</a>'
+  }
+  var loginlink = document.querySelector('.go-to-login-section.link-description');
+  loginlink.addEventListener("click", function() {
+   document.querySelector('.not-a-member-text.link-description').childNodes[0].nodeValue = 'Non sei ancora registrato?';
+   document.querySelector('.not-a-member-link.section-link').innerText = 'Iscriviti'
+   var title=document.querySelectorAll(".title")[1]; 
+   var titletext="Accesso";
+   title.innerHTML=titletext;
+   var divider=document.querySelectorAll(".or-divider")[1]; 
+   var dividertext="<span>Oppure</span>";
+   divider.innerHTML=dividertext;
+   document.querySelectorAll('.btnText')[2].innerHTML = '<span class="btnText">Connettiti con Google</span>'
+   document.querySelector('.forgot-password-link.section-link').innerHTML = 'Hai dimenticato la password?'
+  }, false);
+  var forgetlink = document.querySelector('.forgot-password-link.section-link');
+  forgetlink.addEventListener("click", function() {
+   document.querySelector('.go-to-login-section.section-link.link-description').innerHTML = 'Torna per accedere'
+   document.querySelector('.form-description').innerHTML = 'Inserisci il tuo indirizzo email'
+   var title=document.querySelectorAll(".title")[2]; 
+   var titletext="Resetta la password";
+   title.innerHTML=titletext;
+  }, false);
+ }
+ </script><!--  End Product Custom HTML Markup -->
+    </body>
+    </html>
